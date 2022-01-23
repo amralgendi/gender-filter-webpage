@@ -26,7 +26,11 @@ window.onload = () => {
   video.play()
   video.addEventListener('ended', () => {
     document.body.style.overflowY = 'visible'
-    document.body.scrollIntoView({ behavior: 'smooth' })
+    if (
+      (document.querySelector('.play-pause button').style.visibility = 'hidden')
+    ) {
+      document.body.scrollIntoView({ behavior: 'smooth' })
+    }
     document.querySelector('.play-pause button').style.visibility = 'visible'
 
     document.querySelector('.play-pause button').innerHTML = 'play'
