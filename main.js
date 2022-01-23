@@ -35,21 +35,24 @@ window.onload = () => {
 
     document.querySelector('.play-pause button').innerHTML = 'play'
   })
+
+  const button = document.querySelector('.play-pause button')
+
+  console.log(button)
+
+  button.addEventListener('click', () => {
+    console.log('clicked')
+    if (button.innerHTML == 'play') {
+      document.querySelector('video').play()
+      button.innerHTML = 'pause'
+    } else if (button.innerHTML == 'pause') {
+      document.querySelector('video').pause()
+      button.innerHTML = 'play'
+    }
+  })
 }
 
 function scrollToJustAbove(element, margin = 20) {
   let dims = element.getBoundingClientRect()
   window.scrollTo(window.scrollX, dims.top - margin)
 }
-document.querySelector('.play-pause button'),
-  addEventListener('click', () => {
-    if (document.querySelector('.play-pause button').innerHTML == 'play') {
-      document.querySelector('video').play()
-      document.querySelector('.play-pause button').innerHTML = 'pause'
-    } else if (
-      document.querySelector('.play-pause button').innerHTML == 'pause'
-    ) {
-      document.querySelector('video').pause()
-      document.querySelector('.play-pause button').innerHTML = 'play'
-    }
-  })
