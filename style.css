@@ -1,0 +1,196 @@
+/*
+#00887A GREEN
+#FFCCBC BADGE
+#FFFFFF WHITE
+#D3E3FC FADED GREY
+#77A6F7 BLUE
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-family: 'Cabin', sans-serif;
+  text-align: center;
+}
+span {
+  font-family: inherit;
+}
+h2 {
+  font-family: 'Cabin', sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+p {
+  font-size: 20px;
+  line-height: 40px;
+}
+.line-through {
+  text-decoration: line-through;
+}
+.nav {
+  color: #00887a;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  min-height: 70px;
+  border-bottom: 1px solid rgb(241, 241, 241);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.nav a {
+  text-decoration: none;
+  color: inherit;
+}
+.title {
+  flex: 2;
+}
+.nav-list {
+  flex: 3;
+}
+.nav-list ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.section {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+/* .section:first-child {
+  margin-top: 70px;
+  height: calc(100vh - 70px);
+} */
+#description {
+  display: flex;
+  background-color: #f9fbfd;
+  align-items: center;
+  justify-content: center;
+}
+.titleNparagraph {
+  flex: 1;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+#description > p {
+  flex: 3;
+}
+#description .laptop-img {
+  flex: 5;
+}
+#description .laptop-img img {
+  width: 100%;
+  min-width: 300px;
+  height: auto;
+}
+
+#examples {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+#examples {
+  padding: 0;
+  margin: 0;
+}
+.laptop-video {
+  position: relative;
+}
+.laptop-video .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  opacity: 0;
+}
+.laptop-video video {
+  width: 100%;
+  max-height: 100%;
+}
+
+#get {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section.download {
+  width: 95%;
+  min-height: 100px;
+}
+.sub {
+  position: relative;
+  margin-top: 8px;
+}
+.sub::before {
+  content: 'Ready to install the extension';
+  position: absolute;
+  font-size: 16px;
+  top: -18px;
+  color: #00887a;
+}
+button {
+  border: 1px solid #ffccbc;
+  background-color: #00887a;
+  color: white;
+  cursor: pointer;
+}
+#get button {
+  min-width: 200px;
+  border-radius: 20px;
+  padding: 7px;
+  font-size: 16px;
+}
+.nav button {
+  min-width: 100px;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 16px;
+}
+#donate {
+  align-items: center;
+  justify-content: space-between;
+}
+.section.donate {
+  width: 95%;
+
+  min-height: 100px;
+}
+#donate button {
+  min-width: 200px;
+  border-radius: 20px;
+  padding: 7px;
+  font-size: 16px;
+}
+.big-text p {
+  font-size: 25px;
+  min-width: 400px;
+  display: flex;
+  align-items: center;
+}
