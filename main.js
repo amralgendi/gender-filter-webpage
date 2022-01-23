@@ -19,14 +19,17 @@ window.onload = () => {
 
   const video = document.querySelector('video')
   const hello = document.querySelector('#examples')
-  hello.scrollIntoView({ behavior: 'smooth' })
   document.body.style.overflowY = 'hidden'
+  hello.scrollIntoView({ behavior: 'smooth' })
   video.muted = true
-
+  document.querySelector('.play-pause button').style.visibility = 'hidden'
   video.play()
   video.addEventListener('ended', () => {
     document.body.style.overflowY = 'visible'
     document.body.scrollIntoView({ behavior: 'smooth' })
+    document.querySelector('.play-pause button').style.visibility = 'visible'
+
+    document.querySelector('.play-pause button').innerHTML = 'play'
   })
 }
 
@@ -34,3 +37,15 @@ function scrollToJustAbove(element, margin = 20) {
   let dims = element.getBoundingClientRect()
   window.scrollTo(window.scrollX, dims.top - margin)
 }
+document.querySelector('.play-pause button'),
+  addEventListener('click', () => {
+    if (document.querySelector('.play-pause button').innerHTML == 'play') {
+      document.querySelector('video').play()
+      document.querySelector('.play-pause button').innerHTML = 'pause'
+    } else if (
+      document.querySelector('.play-pause button').innerHTML == 'pause'
+    ) {
+      document.querySelector('video').pause()
+      document.querySelector('.play-pause button').innerHTML = 'play'
+    }
+  })
